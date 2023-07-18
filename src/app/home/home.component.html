@@ -1,1 +1,11 @@
-<p>home works!</p>
+<form class="example-form">
+    <h1 appFoo [color]="color" [weight]="weight" (appEmit)="showAlert()">hello world!l</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>Ener Favorite color</mat-label>
+        <input matInput [(ngModel)]="color" name="color">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label> Enter Favorite font-weight</mat-label>
+        <input matInput [(ngModel)]="weight" name="weight">
+    </mat-form-field>
+</form>
