@@ -5,6 +5,7 @@ import { importProvidersFrom } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './app/home/home.component';
 import { ProductComponent } from './app/product/product.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 const routes=[{path:'home', 
               component:HomeComponent,
@@ -13,5 +14,5 @@ const routes=[{path:'home',
                loadComponent:()=>import('./app/product/product.component').then(res=>res.ProductComponent),
               title:'product page'}]
 bootstrapApplication(AppComponent,{
-  providers:[importProvidersFrom(RouterModule.forRoot(routes))]
+  providers:[importProvidersFrom(RouterModule.forRoot(routes)), provideAnimations()]
 }).catch(e=>console.log('e'));

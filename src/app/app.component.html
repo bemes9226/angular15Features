@@ -1,4 +1,20 @@
-<h1 appFoo>hello world!</h1>
-<a routerLink="/home">Home</a>
-<a routerLink="/product">product</a>
+<mat-toolbar color="primary">
+    <span>User Management</span>
+    <div class="spacer"></div>
+    <a mat-button routerLink="/home">Home</a>
+    <a mat-button routerLink="/product">About</a>
+    <a mat-button routerLink="/">Contact</a>
+</mat-toolbar>
 <router-outlet></router-outlet>
+
+<form class="example-form">
+    <h1 appFoo [color]="color" [weight]="weight" (appEmit)="showAlert()">hello world!l</h1>
+    <mat-form-field class="example-full-width">
+        <mat-label>Ener Favorite color</mat-label>
+        <input matInput [(ngModel)]="color" name="color">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label> Enter Favorite font-weight</mat-label>
+        <input matInput [(ngModel)]="weight" name="weight">
+    </mat-form-field>
+</form>
