@@ -10,12 +10,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ObjComponent } from "./oops/obj/obj.component";
+import { EncapsulationComponent } from "./oops/encapsulation/encapsulation.component";
+import { InheritanceComponent } from "./oops/inheritance/inheritance.component";
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, FooDirective, RouterModule, ColorDirective, BoldDirective],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    imports: [CommonModule, FormsModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatToolbarModule, FooDirective, RouterModule, ColorDirective, BoldDirective, ObjComponent, EncapsulationComponent, InheritanceComponent]
 })
 export class AppComponent {
   title = 'angular15Features';
