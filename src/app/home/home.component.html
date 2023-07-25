@@ -9,3 +9,6 @@
         <input matInput [(ngModel)]="weight" name="weight">
     </mat-form-field>
 </form>
+
+<!-- NG Image optimizer -->
+<app-ng-image-optimize *ngFor="let cat of cats" [catItem]="cat"></app-ng-image-optimize>
